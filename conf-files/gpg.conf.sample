@@ -43,11 +43,11 @@ cert-digest-algo SHA512
 # Download the ssl certificate at:
 # https://sks-keyservers.net/sks-keyservers.netCA.pem
 keyserver hkps://hkps.pool.sks-keyservers.net
-#keyserver-options ca-cert-file=/home/nimrod/.certs/sks-keyservers.net.pem
+#keyserver-options ca-cert-file=/path/to/sks-keyservers.net.pem
 keyserver-options no-honor-keyserver-url
 
 # My default key
-default-key 0xD0C33581852FCCC7 
+#default-key 0xdeadbeefdeadbeef (PLEASE REPLACE WITH PROPER OXLONG KEYID)
 
 # command te see photo in keys
 #photo-viewer "<your image software here> %i"

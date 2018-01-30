@@ -1,0 +1,35 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	editor = vim # may be any editor, i.e. atom,sublime,nano,etc
+	worktree = ~/git_repo # Should be a absolute or relative path to the top-most parent directory
+[user]
+	name = Your_Name
+	username = # (Optional, commonly a github/gitlab or project handle you are known by)
+	email = someuser@users.no-reply.github.com
+	signingkey = 0xdeadbeefdeadbeef
+[commit]
+	gpgSign = true
+	status = true	
+[format]
+	from = true
+[gpg]
+	program = gpg2
+	gpgsign = true
+[log]
+	abbrevCommit = true
+	showSignature = yes
+[protocol "git"]
+	allow = true
+[protocol "ssh"]
+	allow = true
+[protocol "http"]
+	allow = true
+[push]
+	gpgSign = if-asked
+[tag]
+	forcesignAnnotated = true
+[alias]
+	Commit = "commit -s "
