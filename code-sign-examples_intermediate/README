@@ -1,0 +1,3 @@
+This repo is setup to show intermediate/semi sysadmin style tasks and code signing operations.
+
+These operations include basic cross-signing and more advanced repository configuration including forcing repository and review workflow configurations.
