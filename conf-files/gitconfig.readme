@@ -1,0 +1,27 @@
+
+* Take the conf-files/gitconfig.sample and save as $(prefix)/.git/config (i.e. ~/git/demo_repo/.git/config)
+
+* This git-config file has several additional and optionally optimal settings, namely among them: (broken down via subsection as seen in the file itself)
+
+-------
+[core]
+        -       editor = $EDITOR # This allows for setting a default text editor for things like editing the code, git apply/git commit and other such commands.
+        -       work_tree = $PATH/to/repo # This is most beneficial when using multiple submodules, like when including additional libraries as a external, but inclusive repo, or repo branches that are otherwise recursive.  Commands such as git add /  git patch and similar will act on the work_tree value REGARDLESS of the current directory, this is again of most benefit when using several cascading directories or repositories.
+-------
+[user]
+        -       name = Your_Name # This is default name used for commit messages.
+        -       email = Your_Email # Similiarly needed for commit messages.
+        -       username = some_coder_handle. # This is great when you have an email or name that is not easily mapped to your commits, however a coder or gaming or otherwise project specific handle (i.e. DevOps-ITDept, or 3L1T3 Cod3R
+        -       signingkey = 0xdeadbeefdeadbeef # This sets a default gpg keypair via the 0XLONG key-id.
+-------
+[format]
+        -       from = true     # Forces a From: $name <$email>  (From [user] subsection above.)
+-------
+[commit]
+        -       gpgsign = true  # This FORCES `git commit -S` on ALL commits.  This is the basis of this guide, git commit -S cryptographically signs the commits with a specified signing key.
+        -       status = true   # This forces a git status report at the time of committing, this is helpful to ensure that files being committed match what is intended, from branch foo/feature0 and not foo/feature1.
+-------
+[gpg]
+        -       gpgsign = true # This forces a gpg sign operation (git commit -S) for ALL Operations.
+        -       gpgprogram = gpg2 # Forces the use of gnupg version 2
+

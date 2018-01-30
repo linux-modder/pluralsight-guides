@@ -56,44 +56,8 @@ It is assumed that you have created at least one keypair for use with signing yo
 Basic Setup Info:
 ~~~~~~~~~~~~~~~~~
 
-************
-* gpg.conf *
-************
+* Read the .readme files in conf-files/ for the respective files, especially if you have never seen or utilized such configuration files.
 
-* Take the gpg.conf.sample and copy it to your $GNUPG_HOME (usually this is `C:\Users\UserName\gnupg` (Windows) OR `/home/username/.gnupg/` (MacOS/Linux)) directory and save it as gpg.conf
-        
-	-	This sample config file is a generally accepted defacto secure configuration, which at a minimum needs replacing 
-`#default-key 0xlong` to `default-key your_keyid` 
-        
-for example:
-```
-        #default-key 0xLONG
-becomes
-        default-key 0xD0C33581852FCCC7 (however this would be _YOUR_ long format keyid)
-```
+* Move the files into ~/.gnupg/gpg.conf and ~/$repo/.git/config respectively.
 
-* Grab your long (16 digit keyid) often noted as `0xLONG`, or `0xYourKeysDeadBeef` or `0xYour Keys Dead Beef' format, if you are unsure of this keyid you can use gpg2 -K --keyid-format 0xlong OR gpg2 --edit-key somename@email.xyz 
 
-        for example:
-
-```
-        user@localhost $ gpg2 -K -keyid-format 0xlong
-                ------------------------------
-sec   ed25519/0xD0C33581852FCCC7 2017-06-04 [C] [expires: 2018-06-04]
-      Key fingerprint = 4700 FD6D 3EC2 54F9 46BB  9404 D0C3 3581 852F CCC7
-uid                   [ultimate] Corey Sheldon (Official Personal 2017 Key -- ALL Previous & Future Keys not expirign in July are invalid) <sheldon.corey@openmailbox.org>
-uid                   [ultimate] [jpeg image of size 60284]
-(snipped for brevity)
-```
-
-OR 
-
-```
-        user@localhost $ gpg2 --edit-key sheldon.corey@openmailbox.org
-sec  ed25519/0xD0C3 3581 852F CCC7
-(snipped for brevity)
-```
- 
-******************************
-*  gitconfig || .git/config: *
-******************************
