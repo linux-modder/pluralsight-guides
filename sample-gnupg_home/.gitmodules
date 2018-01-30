@@ -1,0 +1,3 @@
+[submodule "sample-gnupg_home"]
+	path = sample-gnupg_home
+	url = /home/nimrod/git/personal/pluralsight-guides/devops/sign-your-code-and-documents/sample-gnupg_home

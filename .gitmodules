@@ -1,0 +1,9 @@
+[submodule "code-sign-examples_beginner"]
+	path = code-sign-examples_beginner
+	url = ./code-sign-examples_beginner
+[submodule "code-sign-examples_intermediate"]
+	path = code-sign-examples_intermediate
+	url = ./code-sign-examples_intermediate
+[submodule "code-sign-examples_expert"]
+	path = code-sign-examples_expert
+	url = ./code-sign-examples_expert
