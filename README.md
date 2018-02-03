@@ -60,4 +60,31 @@ Basic Setup Info:
 
 * Move the files into ~/.gnupg/gpg.conf and ~/$repo/.git/config respectively.
 
+* If needed create a GPG keypair (or for more advanced tasks several keypairs for cross-signing)
+
+* Decide which repo of tasks suits your needs/skill-level.  These sub-repos are setup in such a way that you can fork/clone them separately for your own use-cases.
+
+~~~~~~~~~
+Beginner:
+~~~~~~~~~
+
+-	Signing code commits
+-	Creating and signing tarballs/zip files
+-	Clear-signing documents like resumes and Letters of Reference
+
+~~~~~~~~~~~~~
+Intermediate:
+~~~~~~~~~~~~~
+
+-	Creating basic configurations that allow for pulling in signed setup files
+-	Pulling in signed / validated files/configs into a bare system
+-	Integrating 2FA (non-hardware) tokens into signing/validation process
+
+~~~~~~~~~~~~~~~~
+Advanced/Expert:
+~~~~~~~~~~~~~~~~
+
+-	Cross-signing Keys
+-	Using 2FA (hardware) tokens to make for more secure management of Signing/Encrypting Keys
+
 
